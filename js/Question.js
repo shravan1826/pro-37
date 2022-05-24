@@ -5,31 +5,27 @@ class Question {
     this.input1 = createInput("Enter Your Name Here....");
     this.input2 = createInput("Enter Correct Option No..");
     this.button = createButton('Submit');
+    this.button2 = createButton('Reset');
     this.question = createElement('h3');
     this.option1 = createElement('h4');
     this.option2 = createElement('h4');
     this.option3 = createElement('h4');
     this.option4 = createElement('h4');
-    this.message = createElement("h2")
   }
 
   hide(){
     this.title.hide();
     this.input1.hide();
     this.button.hide();
+    //this.button2.hide();
     this.input2.hide();
-    this.message.hide();
   }
 
   display(){
     this.title.html("MyQuiz Game");
     this.title.position(350, 0);
 
-  //this.question("Question:- What starts and ends with the letter ‘E’, but has only one letter? " );
-    // this.html("Question:- What starts and ends with the letter ‘E’, but has only one letter? " );
     this.question.html("Question:- What starts and ends with the letter ‘E’, but has only one letter? " );
-    // question.html("Question:- What starts and ends with the letter ‘E’, but has only one letter? " );
-
     this.question.position(150, 80);
     this.option1.html("1: Everyone " );
     this.option1.position(150, 100);
@@ -56,9 +52,6 @@ class Question {
       contestant.index = contestantCount;
       contestant.update();
       contestant.updateCount(contestantCount);
-      this.message.html("Thank You, Your Answer Has Been Submitted");
-      this.message.position(350);
-   
     });
 
     this.button2.mousePressed(()=>{
@@ -69,10 +62,3 @@ class Question {
     })
   }
 }
-    
-
-   
-
-
-  
-  
